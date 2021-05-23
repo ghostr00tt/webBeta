@@ -1,0 +1,42 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+@model PagedList.Core.IPagedList<BiOgrenBeta.Models.TestClass>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <table class="table table-hover">
+
+        <tr>
+            <th>CourseName</th>
+            <th>CategoryID </th>
+            <th>Video</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.VideoName</td>
+                <td>@item.CategoryID</td>
+                <td>@item.VideoPath</td>
+            </tr>
+        }
+        <tr>
+            <td colspan="3" align="center">
+                @*<pager list="@Model" asp-controller="Category" asp-action="Courses" />*@
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
