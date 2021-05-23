@@ -194,5 +194,3 @@ C:\Users\asus k555l\source\repos\BiOgrenBeta\BiOgrenBeta\bin\Debug\netcoreapp3.1
 C:\Users\asus k555l\source\repos\BiOgrenBeta\BiOgrenBeta\obj\Debug\netcoreapp3.1\BiOgrenBeta.csproj.CoreCompileInputs.cache
 C:\Users\asus k555l\source\repos\BiOgrenBeta\BiOgrenBeta\obj\Debug\netcoreapp3.1\BiOgrenBeta.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\asus k555l\source\repos\BiOgrenBeta\BiOgrenBeta\obj\Debug\netcoreapp3.1\BiOgrenBeta.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\asus k555l\source\repos\BiOgrenBeta\BiOgrenBeta\obj\Debug\netcoreapp3.1\Razor\Views\Category\Courses.cshtml.g.cs
-C:\Users\asus k555l\source\repos\BiOgrenBeta\BiOgrenBeta\obj\Debug\netcoreapp3.1\Razor\Views\Category\_ViewImports.cshtml.g.cs
