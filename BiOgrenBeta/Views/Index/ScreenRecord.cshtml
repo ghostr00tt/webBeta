@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "ScreenRecord";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="icon" type="image/png" href="~/screen-recorder/favicon-768.png" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="~/screen-recorder/bundle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="UTF-8">
+    <title>Screen Recorder</title>
+</head>
+<body>
+    <h1 id="popUp"><em>Bu uygulama yalnızca Masaüstü Web Tarayıcılarında Çalışmaktadır !</em></h1>
+    <div class="home-container">
+        <h1 id="title">Screen Recorder</h1>
+        <button class="mdc-fab mdc-fab--extended" id="selectScreenButton">
+            <div class="mdc-fab__ripple"></div>
+            <span class="material-icons mdc-fab__icon">tv</span>
+            <span class="mdc-fab__label">Select a screen</span>
+        </button>
+    </div>
+    <video id="preview" autoplay muted></video>
+    <button class="mdc-fab" id="startButton" aria-label="Start">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon material-icons">stop_circle</span>
+    </button>
+    <span id="countdown">3</span>
+    <button class="mdc-fab" id="stopButton" aria-label="Stop">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon material-icons">stop</span>
+    </button>
+    <video id="recording" controls></video>
+    <form action="/">
+        <button class="mdc-fab" id="newRecordingButton" aria-label="New">
+            <div class="mdc-fab__ripple"></div>
+            <span class="mdc-fab__icon material-icons">settings_backup_restore</span>
+        </button>
+    </form>
+    <a id="downloadButtonLink">
+        <button class="mdc-fab" id="downloadButton" aria-label="Download">
+            <div class="mdc-fab__ripple"></div>
+            <span class="mdc-fab__icon material-icons">get_app</span>
+        </button>
+        <br />
+
+    </a>
+<a id="downloadButtonLink" style="margin-left:40px;margin-right:40px">
+    <button href="~/TestClasses/Create" class="mdc-fab" id="downloadBUtton" aria-label="Download">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon material-icons"> Eğitim Oluştur</span>
+    </button>
+</a>
+  
+    <a href="/about">
+        <i class="material-icons md-18" id="infoIcon">info</i>
+    </a>
+    <script src="~/screen-recorder/recorder.js"></script>
+    <script src="~/screen-recorder/bundle.js" async></script>
+    <!-- Register PWA service worker -->
+
+</body>
+</html>

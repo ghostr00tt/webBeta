@@ -1,0 +1,31 @@
+﻿@model BiOgrenBeta.Models.TestClass
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>TestClass</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VideoName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VideoName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VideoPath)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VideoPath)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.VideoID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

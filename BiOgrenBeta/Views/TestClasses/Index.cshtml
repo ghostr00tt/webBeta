@@ -1,0 +1,47 @@
+﻿@model IEnumerable<BiOgrenBeta.Models.TestClass>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VideoName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VideoPath)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VideoName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    <div class="owl-video-frame"> <video style="width:250px;height:250px" loop controls> <source src="@Url.Content("~/"+@item.VideoPath)" type="video/mp4" /> </video></div>
+                    @*<video style="width=110" height="110" id="videoplayer" src="@Url.Content("~/"+@item.VideoPath)" controls.width="110" controls.height="110"  />*@
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.VideoID">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.VideoID">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.VideoID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
